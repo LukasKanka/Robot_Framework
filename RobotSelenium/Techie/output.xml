@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231013 14:31:14.425" rpa="false" schemaversion="4">
+<suite id="s1" name="TC1" source="C:\Users\lukas\Mega\Data\GitHub\Robot_Framework\RobotSelenium\Techie\TestCases\TC1.robot">
+<test id="s1-t1" name="LoginTest" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demo.nopcommerce.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231013 14:31:14.610" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20231013 14:31:14.609" endtime="20231013 14:31:17.177"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[@class="ico-login"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231013 14:31:17.179" level="INFO">Clicking link 'xpath://a[@class="ico-login"]'.</msg>
+<msg timestamp="20231013 14:31:17.348" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231013 14:31:17.348" level="FAIL">Link with locator 'xpath://a[@class="ico-login"]' not found.</msg>
+<status status="FAIL" starttime="20231013 14:31:17.178" endtime="20231013 14:31:17.351"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Email testing@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231013 14:31:17.352" endtime="20231013 14:31:17.352"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Password Test@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231013 14:31:17.352" endtime="20231013 14:31:17.352"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://input[@class='button-1 Login-button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231013 14:31:17.352" endtime="20231013 14:31:17.352"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20231013 14:31:17.353" endtime="20231013 14:31:17.353"/>
+</kw>
+<status status="FAIL" starttime="20231013 14:31:14.608" endtime="20231013 14:31:17.353">Link with locator 'xpath://a[@class="ico-login"]' not found.</status>
+</test>
+<status status="FAIL" starttime="20231013 14:31:14.427" endtime="20231013 14:31:17.354"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TC1">TC1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
