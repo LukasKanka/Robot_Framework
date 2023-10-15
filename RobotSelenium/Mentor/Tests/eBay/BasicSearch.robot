@@ -10,12 +10,21 @@ ${url}  https://www.ebay.com/
 Verify basic search functionality foe eBay
   [Documentation]    This test case verifins the basic search
   [Tags]  Functional
+  Start test
+  Verify Search Results
+  Finnish TestCase
 
-    open browser  ${url}  ${browser}
-    input text   //*[@id="gh-ac"]  mobile
-    click button   xpath://*[@id="gh-btn"]
-    # ověříme že se na stránce zobrzí ve filtru mobily
-    page should contain  výsledků mobile
-    close browser
 
 *** Keywords ***
+Start test
+    open browser  ${url}  ${browser}
+    maximize browser window
+
+Verify Search Results
+    input text   //*[@id="gh-ac"]  mobile
+    #click button   xpath://*[@id="gh-btn"]
+    press keys    xpath://*[@id="gh-btn"]  RETURN
+    page should contain  výsledků mobile
+
+Finnish TestCase
+    close browser
