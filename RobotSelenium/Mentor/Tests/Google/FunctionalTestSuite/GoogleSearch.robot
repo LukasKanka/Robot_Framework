@@ -7,8 +7,8 @@ ${url}  https://www.google.com/
 
 *** Test Cases ***
 This is sample test case
-   [documentation]  Google test
-   [tags]  regression
+    [Documentation]   Google test
+    [Tags]     regression
    open browser   ${url}  ${browser}
    close browser
 *** Keywords ***
