@@ -22,6 +22,7 @@ Start test
 
 Verify Search Results
     input text   //*[@id="gh-ac"]  mobile
+    # kliknout na tlačítko můžeme více způsoby
     #click button   xpath://*[@id="gh-btn"]
     press keys    xpath://*[@id="gh-btn"]  RETURN
     page should contain  výsledků mobile
