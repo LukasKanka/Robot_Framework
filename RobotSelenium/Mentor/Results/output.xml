@@ -1,103 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231016 21:20:47.149" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231016 22:10:01.212" rpa="false" schemaversion="4">
 <suite id="s1" name="BasicSearch2" source="C:\Users\lukas\Mega\Data\GitHub\Robot_Framework\RobotSelenium\Mentor\Tests\eBay\BasicSearch2.robot">
-<test id="s1-t1" name="Verify basic search functionality foe eBay" line="13">
+<test id="s1-t1" name="Verify basic search functionality foe eBay" line="15">
 <kw name="Start test" library="CommonFunctionality" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231016 21:20:47.411" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com/'.</msg>
-<status status="PASS" starttime="20231016 21:20:47.411" endtime="20231016 21:20:51.106"/>
+<msg timestamp="20231016 22:10:01.501" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com/'.</msg>
+<status status="PASS" starttime="20231016 22:10:01.500" endtime="20231016 22:10:06.512"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231016 21:20:51.106" endtime="20231016 21:20:51.221"/>
+<status status="PASS" starttime="20231016 22:10:06.512" endtime="20231016 22:10:06.627"/>
 </kw>
-<status status="PASS" starttime="20231016 21:20:47.411" endtime="20231016 21:20:51.222"/>
+<status status="PASS" starttime="20231016 22:10:01.500" endtime="20231016 22:10:06.627"/>
 </kw>
 <kw name="Verify Search Results" library="eBay_UserDefinedKeywords">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="gh-ac"]</arg>
 <arg>mobile</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231016 21:20:51.225" level="INFO">Typing text 'mobile' into text field '//*[@id="gh-ac"]'.</msg>
-<status status="PASS" starttime="20231016 21:20:51.223" endtime="20231016 21:20:51.452"/>
+<msg timestamp="20231016 22:10:06.631" level="INFO">Typing text 'mobile' into text field '//*[@id="gh-ac"]'.</msg>
+<status status="PASS" starttime="20231016 22:10:06.628" endtime="20231016 22:10:06.799"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>xpath://*[@id="gh-btn"]</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20231016 21:20:51.454" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
-<msg timestamp="20231016 21:20:53.951" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20231016 21:20:53.951" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20231016 21:20:51.452" endtime="20231016 21:20:54.164"/>
+<msg timestamp="20231016 22:10:06.800" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
+<msg timestamp="20231016 22:10:09.930" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20231016 22:10:09.930" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20231016 22:10:06.799" endtime="20231016 22:10:10.132"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>výsledků mobile</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231016 21:20:54.197" level="INFO">Current page contains text 'výsledků mobile'.</msg>
-<status status="PASS" starttime="20231016 21:20:54.164" endtime="20231016 21:20:54.197"/>
+<msg timestamp="20231016 22:10:10.165" level="INFO">Current page contains text 'výsledků mobile'.</msg>
+<status status="PASS" starttime="20231016 22:10:10.132" endtime="20231016 22:10:10.165"/>
 </kw>
-<status status="PASS" starttime="20231016 21:20:51.222" endtime="20231016 21:20:54.198"/>
+<status status="PASS" starttime="20231016 22:10:06.628" endtime="20231016 22:10:10.165"/>
 </kw>
 <kw name="Filter results by condition" library="eBay_UserDefinedKeywords">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//span[contains(text(),"Stav")]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231016 21:20:54.198" level="INFO">Clicking element '//span[contains(text(),"Stav")]'.</msg>
-<status status="PASS" starttime="20231016 21:20:54.198" endtime="20231016 21:20:54.280"/>
+<msg timestamp="20231016 22:10:10.167" level="INFO">Clicking element '//span[contains(text(),"Stav")]'.</msg>
+<status status="PASS" starttime="20231016 22:10:10.165" endtime="20231016 22:10:10.231"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231016 21:20:57.281" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20231016 21:20:54.280" endtime="20231016 21:20:57.281"/>
+<msg timestamp="20231016 22:10:13.232" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231016 22:10:10.231" endtime="20231016 22:10:13.232"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//span[normalize-space()="Nový"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231016 21:20:57.282" level="INFO">Clicking element '//span[normalize-space()="Nový"]'.</msg>
-<status status="PASS" starttime="20231016 21:20:57.281" endtime="20231016 21:20:59.345"/>
+<msg timestamp="20231016 22:10:13.234" level="INFO">Clicking element '//span[normalize-space()="Nový"]'.</msg>
+<status status="PASS" starttime="20231016 22:10:13.232" endtime="20231016 22:10:15.272"/>
 </kw>
-<status status="PASS" starttime="20231016 21:20:54.198" endtime="20231016 21:20:59.345"/>
+<status status="PASS" starttime="20231016 22:10:10.165" endtime="20231016 22:10:15.272"/>
 </kw>
 <kw name="Verify filter results" library="eBay_UserDefinedKeywords">
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>//li[@class="carousel__snap-point srp-carousel-list__item srp-multi-aspect__item--applied"]</arg>
-<arg>Novýy</arg>
+<arg>Nový</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231016 21:20:59.696" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231016 21:20:59.697" level="FAIL">Element '//li[@class="carousel__snap-point srp-carousel-list__item srp-multi-aspect__item--applied"]' should have contained text 'Novýy' but its text was 'Nový
-Odebrat filtr'.</msg>
-<status status="FAIL" starttime="20231016 21:20:59.346" endtime="20231016 21:20:59.702"/>
+<msg timestamp="20231016 22:10:15.431" level="INFO">Element '//li[@class="carousel__snap-point srp-carousel-list__item srp-multi-aspect__item--applied"]' contains text 'Nový'.</msg>
+<status status="PASS" starttime="20231016 22:10:15.273" endtime="20231016 22:10:15.431"/>
 </kw>
-<status status="FAIL" starttime="20231016 21:20:59.345" endtime="20231016 21:20:59.702"/>
+<status status="PASS" starttime="20231016 22:10:15.272" endtime="20231016 22:10:15.431"/>
 </kw>
 <kw name="Finnish TestCase" library="CommonFunctionality" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231016 21:20:59.703" endtime="20231016 21:21:01.992"/>
+<status status="PASS" starttime="20231016 22:10:15.432" endtime="20231016 22:10:17.758"/>
 </kw>
-<status status="PASS" starttime="20231016 21:20:59.702" endtime="20231016 21:21:01.992"/>
+<status status="PASS" starttime="20231016 22:10:15.432" endtime="20231016 22:10:17.759"/>
 </kw>
 <doc>This test case verifins the basic search</doc>
 <tag>Functional</tag>
-<status status="FAIL" starttime="20231016 21:20:47.410" endtime="20231016 21:21:01.992">Element '//li[@class="carousel__snap-point srp-carousel-list__item srp-multi-aspect__item--applied"]' should have contained text 'Novýy' but its text was 'Nový
-Odebrat filtr'.</status>
+<status status="PASS" starttime="20231016 22:10:01.499" endtime="20231016 22:10:17.759"/>
 </test>
 <doc>Basic Search Funcianality</doc>
-<status status="FAIL" starttime="20231016 21:20:47.151" endtime="20231016 21:21:01.993"/>
+<status status="PASS" starttime="20231016 22:10:01.214" endtime="20231016 22:10:17.760"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">Functional</stat>
+<stat pass="1" fail="0" skip="0">Functional</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="BasicSearch2">BasicSearch2</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="BasicSearch2">BasicSearch2</stat>
 </suite>
 </statistics>
 <errors>

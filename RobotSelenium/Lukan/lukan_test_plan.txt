@@ -1,0 +1,4 @@
+Otestovat menu tlačítka kliknutí
+Otestovat vyhledávání
+Otestovat text tlačítek (elementů)
+Otestovat titulek
