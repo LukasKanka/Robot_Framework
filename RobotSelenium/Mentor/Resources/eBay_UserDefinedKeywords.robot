@@ -15,6 +15,4 @@ Filter results by condition
    CLICK ELEMENT  //span[normalize-space()="Nový"]
 
 Verify filter results
-# ověřit filtr že zobrazí Nový
-# opravit
-   ELEMENT SHOULD CONTAIN  //*[@id="s0-53-17-6-3-4[0]-3-2-1-list"]/li/div/a/div/text()
+   ELEMENT SHOULD CONTAIN  //li[@class="carousel__snap-point srp-carousel-list__item srp-multi-aspect__item--applied"]  Nový
