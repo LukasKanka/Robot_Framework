@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231016 23:35:02.397" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231017 08:57:07.159" rpa="false" schemaversion="4">
 <suite id="s1" name="Verify search functionality" source="C:\Users\lukas\Mega\Data\GitHub\Robot_Framework\RobotSelenium\Mentor\Tests\eBay\Verify_search_functionality.robot">
 <test id="s1-t1" name="Verify basic search Functionality" line="17">
 <kw name="Start test" library="CommonFunctionality" type="SETUP">
@@ -7,53 +7,54 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231016 23:35:02.698" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com/'.</msg>
-<status status="PASS" starttime="20231016 23:35:02.697" endtime="20231016 23:35:06.931"/>
+<msg timestamp="20231017 08:57:07.433" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com/'.</msg>
+<status status="PASS" starttime="20231017 08:57:07.432" endtime="20231017 08:57:11.248"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231016 23:35:06.931" endtime="20231016 23:35:07.072"/>
+<status status="PASS" starttime="20231017 08:57:11.249" endtime="20231017 08:57:11.384"/>
 </kw>
-<status status="PASS" starttime="20231016 23:35:02.697" endtime="20231016 23:35:07.072"/>
+<status status="PASS" starttime="20231017 08:57:07.432" endtime="20231017 08:57:11.384"/>
 </kw>
 <kw name="Input Search Text and Click Search" library="HeaderPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="gh-ac"]</arg>
-<arg>mobile</arg>
+<arg>${search_text_list}[1]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231016 23:35:07.073" level="INFO">Typing text 'mobile' into text field '//*[@id="gh-ac"]'.</msg>
-<status status="PASS" starttime="20231016 23:35:07.073" endtime="20231016 23:35:07.193"/>
+<msg timestamp="20231017 08:57:11.386" level="INFO">Typing text 'mobile' into text field '//*[@id="gh-ac"]'.</msg>
+<status status="PASS" starttime="20231017 08:57:11.385" endtime="20231017 08:57:11.546"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>xpath://*[@id="gh-btn"]</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20231016 23:35:07.194" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
-<msg timestamp="20231016 23:35:09.686" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20231016 23:35:09.686" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20231016 23:35:07.193" endtime="20231016 23:35:09.820"/>
+<msg timestamp="20231017 08:57:11.548" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
+<msg timestamp="20231017 08:57:14.133" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20231017 08:57:14.133" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20231017 08:57:11.548" endtime="20231017 08:57:14.310"/>
 </kw>
-<status status="PASS" starttime="20231016 23:35:07.073" endtime="20231016 23:35:09.820"/>
+<status status="PASS" starttime="20231017 08:57:11.384" endtime="20231017 08:57:14.310"/>
 </kw>
 <kw name="Verify Search Results" library="SearchResultsPage">
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>výsledků mobile</arg>
+<arg>${search_result}</arg>
+<arg>${search_text_list}[1]</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231016 23:35:09.848" level="INFO">Current page contains text 'výsledků mobile'.</msg>
-<status status="PASS" starttime="20231016 23:35:09.820" endtime="20231016 23:35:09.848"/>
+<msg timestamp="20231017 08:57:14.347" level="INFO">Current page contains text 'výsledků'.</msg>
+<status status="PASS" starttime="20231017 08:57:14.311" endtime="20231017 08:57:14.348"/>
 </kw>
-<status status="PASS" starttime="20231016 23:35:09.820" endtime="20231016 23:35:09.848"/>
+<status status="PASS" starttime="20231017 08:57:14.311" endtime="20231017 08:57:14.348"/>
 </kw>
 <kw name="Finnish TestCase" library="CommonFunctionality" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231016 23:35:09.848" endtime="20231016 23:35:12.074"/>
+<status status="PASS" starttime="20231017 08:57:14.348" endtime="20231017 08:57:16.560"/>
 </kw>
-<status status="PASS" starttime="20231016 23:35:09.848" endtime="20231016 23:35:12.074"/>
+<status status="PASS" starttime="20231017 08:57:14.348" endtime="20231017 08:57:16.560"/>
 </kw>
 <doc>This test case verifies the basic search</doc>
 <tag>Functional</tag>
-<status status="PASS" starttime="20231016 23:35:02.696" endtime="20231016 23:35:12.075"/>
+<status status="PASS" starttime="20231017 08:57:07.431" endtime="20231017 08:57:16.560"/>
 </test>
 <test id="s1-t2" name="Verify advenced search functionality" line="24">
 <kw name="Start test" library="CommonFunctionality" type="SETUP">
@@ -61,37 +62,37 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231016 23:35:12.076" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com/'.</msg>
-<status status="PASS" starttime="20231016 23:35:12.076" endtime="20231016 23:35:15.325"/>
+<msg timestamp="20231017 08:57:16.563" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com/'.</msg>
+<status status="PASS" starttime="20231017 08:57:16.562" endtime="20231017 08:57:20.030"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231016 23:35:15.325" endtime="20231016 23:35:15.447"/>
+<status status="PASS" starttime="20231017 08:57:20.030" endtime="20231017 08:57:20.159"/>
 </kw>
-<status status="PASS" starttime="20231016 23:35:12.076" endtime="20231016 23:35:15.447"/>
+<status status="PASS" starttime="20231017 08:57:16.562" endtime="20231017 08:57:20.159"/>
 </kw>
 <kw name="Click on Advanced Search Link" library="HeaderPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="gh-as-a"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231016 23:35:15.448" level="INFO">Clicking element '//*[@id="gh-as-a"]'.</msg>
-<status status="PASS" starttime="20231016 23:35:15.448" endtime="20231016 23:35:16.415"/>
+<msg timestamp="20231017 08:57:20.161" level="INFO">Clicking element '//*[@id="gh-as-a"]'.</msg>
+<status status="PASS" starttime="20231017 08:57:20.160" endtime="20231017 08:57:21.100"/>
 </kw>
-<status status="PASS" starttime="20231016 23:35:15.448" endtime="20231016 23:35:16.415"/>
+<status status="PASS" starttime="20231017 08:57:20.160" endtime="20231017 08:57:21.100"/>
 </kw>
 <kw name="Finnish TestCase" library="CommonFunctionality" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231016 23:35:16.416" endtime="20231016 23:35:18.594"/>
+<status status="PASS" starttime="20231017 08:57:21.101" endtime="20231017 08:57:23.309"/>
 </kw>
-<status status="PASS" starttime="20231016 23:35:16.415" endtime="20231016 23:35:18.594"/>
+<status status="PASS" starttime="20231017 08:57:21.101" endtime="20231017 08:57:23.309"/>
 </kw>
 <doc>This test case verifies the advanced search</doc>
 <tag>Functional</tag>
-<status status="PASS" starttime="20231016 23:35:12.075" endtime="20231016 23:35:18.594"/>
+<status status="PASS" starttime="20231017 08:57:16.560" endtime="20231017 08:57:23.309"/>
 </test>
 <doc>Basic Search Funcianality</doc>
-<status status="PASS" starttime="20231016 23:35:02.399" endtime="20231016 23:35:18.595"/>
+<status status="PASS" starttime="20231017 08:57:07.162" endtime="20231017 08:57:23.310"/>
 </suite>
 <statistics>
 <total>
@@ -105,7 +106,7 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231016 23:35:02.693" level="ERROR">Error in file 'C:\Users\lukas\Mega\Data\GitHub\Robot_Framework\RobotSelenium\Mentor\Resources\PageObjects\SearchResultsPage.robot' on line 8: Creating keyword 'Select product condition' failed: User keyword cannot be empty.</msg>
-<msg timestamp="20231016 23:35:02.694" level="ERROR">Error in file 'C:\Users\lukas\Mega\Data\GitHub\Robot_Framework\RobotSelenium\Mentor\Resources\PageObjects\SearchResultsPage.robot' on line 11: Creating keyword 'Select delivery options' failed: User keyword cannot be empty.</msg>
+<msg timestamp="20231017 08:57:07.428" level="ERROR">Error in file 'C:\Users\lukas\Mega\Data\GitHub\Robot_Framework\RobotSelenium\Mentor\Resources\PageObjects\SearchResultsPage.robot' on line 14: Creating keyword 'Select product condition' failed: User keyword cannot be empty.</msg>
+<msg timestamp="20231017 08:57:07.428" level="ERROR">Error in file 'C:\Users\lukas\Mega\Data\GitHub\Robot_Framework\RobotSelenium\Mentor\Resources\PageObjects\SearchResultsPage.robot' on line 17: Creating keyword 'Select delivery options' failed: User keyword cannot be empty.</msg>
 </errors>
 </robot>
